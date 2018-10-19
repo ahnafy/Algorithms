@@ -5,6 +5,11 @@ import (
        "sync"
 )
 
+// Intializing Variables to be used later
+var chopsticks [5]int
+var pickup sync.Mutex
+var exit int
+
 // Funtion that checks if the chopsticks are available 
 func checksChopsticks(pick bool, pid int) bool {
        var i, j = pid, (pid+1)%5
@@ -20,3 +25,16 @@ func checksChopsticks(pick bool, pid int) bool {
        return false
 }
 
+// Funtion that acts on if chopsticks are available to be used
+
+func Action(pick bool, pid int) {
+       for true {
+              // Global var: pickup -> sync.Mutex
+              pickup.Lock()
+              if checkChopsticks(pick, pid) {
+                     pickup.Unlock()
+                     break
+              }
+              pickup.Unlock()
+       }
+}
