@@ -9,7 +9,8 @@
 
 Five philosophers sit around a circular table. In front of each philosopher is a large plate of rice. The philosophers alternate their time between eating and thinking. There is one chopstick between each philosopher, to their immediate right and left. In order to eat, a given philosopher needs to use both chopsticks. How can you ensure all the philosophers can eat reliably without starving to death?
 
-![DiningPhilosophersProblem](/imports/Dining+Philosophers+Problem.jpg)
+<img src="/imports/Dining+Philosophers+Problem.jpg" width="500">
+
 
 ### Solution:
 Odd numbered philosophers pick up the right chopstick first and then the left, while even numbered philosophers pick up the left chopstick first and then the right.
